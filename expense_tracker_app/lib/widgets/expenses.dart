@@ -12,7 +12,7 @@ class Expenses extends StatefulWidget {
 class _ExpensesState extends State<Expenses> {
   final List<Expense> _registeredExpenses = [
     Expense(
-      title: "Bankok Trip",
+      title: "Bangkok Trip",
       amount: 623.8,
       date: DateTime.now(),
       category: Category.travel,
@@ -40,6 +40,14 @@ class _ExpensesState extends State<Expenses> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.add),
+          )
+        ],
+      ),
       body: Column(
         children: [
           const Text('Expenses page'),
