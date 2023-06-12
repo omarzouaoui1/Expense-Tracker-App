@@ -15,6 +15,12 @@ class ExpensesList extends StatelessWidget {
       itemCount: expenses.length,
       itemBuilder: (ctx, index) {
         return Dismissible(
+          background: Container(
+            color: Theme.of(context).colorScheme.error.withOpacity(0.70),
+            margin: const EdgeInsets.symmetric(
+              horizontal: 16,
+            ),
+          ),
           key: ValueKey(
             expenses[index],
           ),
